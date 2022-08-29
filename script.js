@@ -13,19 +13,29 @@ function writePassword() {
 generateBtn.addEventListener("click", generatePassword());
 
 function generatePassword() {
-  // variables for password and options
+  //  declared variables for password and options
   let password = "";
   let options = {};
 
   //   initial prompt to display password options
-  function initialPrompt() {
-    alert(
-      "You password may may include 8 - 128 characters" +
-        "\n" +
-        "It may include Upper and Lower case letters" +
-        "\n" +
-        "It may include Numbers and Special Characters"
-    );
+  alert(
+    "Your password may may include 8 - 128 characters" +
+      "\n" +
+      "It may include Upper and Lower case letters" +
+      "\n" +
+      "It may include Numbers and Special Characters"
+  );
+
+  //   inquiry for length of password
+  options.length = prompt("How many characters do you want in your password? : ");
+  if (length < 8 || length > 128) {
+    alert("password must have greater than 8 and less than 128 characters")}
+    else {alert(length + " Characters");}
   }
+  // inquiries for Character types for password
+  //  create password
+  //   display password
+
 }
+
 generatePassword();
