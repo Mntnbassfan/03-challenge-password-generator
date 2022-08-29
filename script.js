@@ -30,7 +30,7 @@ function generatePassword() {
   options.length = prompt(
     "How many characters do you want in your password? : "
   );
-  if (options.lengthlength < 8 || length > 128) {
+  if (options.length < 8 || options.length > 128) {
     alert("password must have greater than 8 and less than 128 characters");
   } else {
     alert(options.length + " Characters");
@@ -38,26 +38,32 @@ function generatePassword() {
   }
 
   // inquiries for Character types for password
-  options.upperCase = prompt(
-    "Do you want uppercase characters in your password? : "
+  if (confirm("Do you want uppercase letters in your password?")) {
+    options.upperCase = true;
+    alert("your password will include upper case characters");
+  }
+  if (confirm("Do you want lowercase letters in your password?")) {
+    options.lowerCase = true;
+    alert("your password will include lower case characters");
+  }
+  if (confirm("Do you want numbers in your password?")) {
+    options.numeric = true;
+    alert("your password will include numbers");
+  }
+  if (confirm("Do you want special characters in your password?")) {
+    options.specialCharacters = true;
+    alert("your password will include special characters");
+  }
+  if (
+    options.upperCase ||
+    options.lowerCase ||
+    options.numeric ||
+    options.specialCharacters
   );
-  alert(options.upperCase);
-
-  options.lowerCase = prompt(
-    "Do you want lower case characters in your password? : "
-  );
-  alert(options.lowerCase);
-
-  options.numeric = prompt("Do you want numbers in your password? : ");
-  alert(options.numeric);
-
-  options.specialCharacters = prompt(
-    "Do you want special characters in your password? : "
-  );
-  alert(options.specialCharacters);
-  console.log("test1");
+  {
+    return length;
+  }
   //  create password
   //   display password
 }
-
 generatePassword();
