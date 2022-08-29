@@ -64,6 +64,20 @@ function generatePassword() {
     return length;
   }
   //  create password
-  //   display password
+
+  //   set up array of alphbetical characters
+  const alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+//   set up arry of special characters
+  const charArray = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "-"];
+//    set up initial password array
+const initialPassword [];
+// plan for password generation
+// i=1, i < length ++
+// if uppercase, pick char from alphArray, capitalize it, push to initialPassword
+// if lowercase, display password, pick char from alphArray, push to initialPassword
+// if number, generate a single random number, push to initialPassword
+// if spec char, pick character from charArray, push to initialPassword
+//  repeat until i = length
+// randomize initial password sore it to final password
 }
 generatePassword();
