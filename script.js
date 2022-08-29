@@ -16,7 +16,7 @@ function generatePassword() {
   //  declared variables for password and options
   let password = "";
   let options = {};
-
+  console.log("test");
   //   initial prompt to display password options
   alert(
     "Your password may may include 8 - 128 characters" +
@@ -27,15 +27,19 @@ function generatePassword() {
   );
 
   //   inquiry for length of password
-  options.length = prompt("How many characters do you want in your password? : ");
-  if (length < 8 || length > 128) {
-    alert("password must have greater than 8 and less than 128 characters")}
-    else {alert(length + " Characters");}
+  options.length = prompt(
+    "How many characters do you want in your password? : "
+  );
+  if (options.lengthlength < 8 || length > 128) {
+    alert("password must have greater than 8 and less than 128 characters");
+  } else {
+    alert(options.length + " Characters");
+    return length;
   }
+
   // inquiries for Character types for password
   //  create password
   //   display password
-
 }
 
 generatePassword();
