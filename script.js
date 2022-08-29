@@ -16,7 +16,7 @@ function generatePassword() {
   //  declared variables for password and options
   let password = "";
   let options = {};
-  console.log("test");
+
   //   initial prompt to display password options
   alert(
     "Your password may may include 8 - 128 characters" +
@@ -38,6 +38,24 @@ function generatePassword() {
   }
 
   // inquiries for Character types for password
+  options.upperCase = prompt(
+    "Do you want uppercase characters in your password? : "
+  );
+  alert(options.upperCase);
+
+  options.lowerCase = prompt(
+    "Do you want lower case characters in your password? : "
+  );
+  alert(options.lowerCase);
+
+  options.numeric = prompt("Do you want numbers in your password? : ");
+  alert(options.numeric);
+
+  options.specialCharacters = prompt(
+    "Do you want special characters in your password? : "
+  );
+  alert(options.specialCharacters);
+  console.log("test1");
   //  create password
   //   display password
 }
