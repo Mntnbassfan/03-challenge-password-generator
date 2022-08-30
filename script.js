@@ -82,15 +82,21 @@ function generatePassword() {
   //    set up initial password array
   var initialPassword = [];
 
-  // for (var i = 0; i < options.length; i++) {
-  // if (options.upperCase) {
-  // initialPassword.push(alphArray.pop[i]);
-  // }
-  // }
-  // if uppercase, pick char from alphArray, capitalize it, push to initialPassword
-  // if lowercase, display password, pick char from alphArray, push to initialPassword
-  // if number, generate a single random number, push to initialPassword
-  // if spec char, pick character from charArray, push to initialPassword
-  //  repeat until i = length
-  // randomize initial password sore it to final password
+  for (var i = 0; i < options.length; i++) {
+  if (options.upperCase) {
+  initialPassword.push(alphArray.toUpperCase()pop[i]);
+  }
+  else if (options.lowerCase){
+    initialPassword.push(alphArray.pop[i]);
+    }
+  else if (options.numeric){
+      initialPassword.push(alphArray.pop[i]);
+      }
+  else if (options.specialCharacters){
+        initialPassword.push(alphArray.pop[i]);
+        }
+  console.log(initialPassword);
+ 
+  // randomize initial password store it to final password
+  // display final password
 }
