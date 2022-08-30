@@ -66,13 +66,18 @@ function generatePassword() {
   //  create password
 
   //   set up array of alphbetical characters
-  const alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+  var alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
 //   set up arry of special characters
-  const charArray = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "-"];
-//    set up initial password array
-const initialPassword [];
-// plan for password generation
-// i=1, i < length ++
+  var charArray = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "-"];
+
+  //    set up initial password array
+var initialPassword [];
+
+for (var i = 0; i < options.length; i++) {
+  if (upperCase) {
+    initialPassword.push (alphArray.pop[i]);
+  }
+}
 // if uppercase, pick char from alphArray, capitalize it, push to initialPassword
 // if lowercase, display password, pick char from alphArray, push to initialPassword
 // if number, generate a single random number, push to initialPassword
