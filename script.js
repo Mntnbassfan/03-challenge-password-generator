@@ -10,7 +10,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword());
+generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   //  declared variables for password and options
@@ -32,57 +32,65 @@ function generatePassword() {
   );
   if (options.length < 8 || options.length > 128) {
     alert("password must have greater than 8 and less than 128 characters");
+    return generatePassword();
   } else {
     alert(options.length + " Characters");
-    return length;
   }
 
   // inquiries for Character types for password
   if (confirm("Do you want uppercase letters in your password?")) {
     options.upperCase = true;
     alert("your password will include upper case characters");
+  } else {
+    options.upperCase = false;
   }
   if (confirm("Do you want lowercase letters in your password?")) {
     options.lowerCase = true;
     alert("your password will include lower case characters");
+  } else {
+    options.lowerCase = false;
   }
   if (confirm("Do you want numbers in your password?")) {
     options.numeric = true;
     alert("your password will include numbers");
+  } else {
+    options.numeric = false;
   }
   if (confirm("Do you want special characters in your password?")) {
     options.specialCharacters = true;
     alert("your password will include special characters");
+  } else {
+    options.specialCharacters = false;
   }
+  console.log(options);
   if (
-    options.upperCase ||
-    options.lowerCase ||
-    options.numeric ||
-    options.specialCharacters
-  );
-  {
-    return length;
+    !options.upperCase &&
+    !options.lowerCase &&
+    !options.numeric &&
+    !options.specialCharacters
+  ) {
+    alert("you must choose at least one option");
+    return generatePassword();
   }
   //  create password
 
   //   set up array of alphbetical characters
   var alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
-//   set up arry of special characters
+  //   set up arry of special characters
   var charArray = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "-"];
 
   //    set up initial password array
-var initialPassword [];
+  var initialPassword = [];
 
-for (var i = 0; i < options.length; i++) {
-  if (upperCase) {
-    initialPassword.push (alphArray.pop[i]);
-  }
+  // for (var i = 0; i < options.length; i++) {
+  // if (options.upperCase) {
+  // initialPassword.push(alphArray.pop[i]);
+  // }
+  // }
+  // if uppercase, pick char from alphArray, capitalize it, push to initialPassword
+  // if lowercase, display password, pick char from alphArray, push to initialPassword
+  // if number, generate a single random number, push to initialPassword
+  // if spec char, pick character from charArray, push to initialPassword
+  //  repeat until i = length
+  // randomize initial password sore it to final password
 }
-// if uppercase, pick char from alphArray, capitalize it, push to initialPassword
-// if lowercase, display password, pick char from alphArray, push to initialPassword
-// if number, generate a single random number, push to initialPassword
-// if spec char, pick character from charArray, push to initialPassword
-//  repeat until i = length
-// randomize initial password sore it to final password
-}
-generatePassword();
