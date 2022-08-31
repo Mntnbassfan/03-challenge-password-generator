@@ -63,6 +63,7 @@ function generatePassword() {
     options.specialCharacters = false;
   }
   console.log(options);
+  // check to see if no options were selected
   if (
     !options.upperCase &&
     !options.lowerCase &&
@@ -92,8 +93,8 @@ console.log("test");
     }
     // 
   else if (options.numeric){
-    initialPassword.push(Math.random() * (9 - 1) + 1;);
-      }
+    initialPassword.push(Math.random() * (9 - 1) + 1); 
+  }
   else if (options.specialCharacters){
         initialPassword.push(charArray.pop[i]);
         }
@@ -101,6 +102,9 @@ console.log("test");
   console.log(initialPassword);
  
   // shuffle initial password store it to final password
+  // found this solution in stack overflow 
+  // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+
   function shuffleArray(initialPassword) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -112,7 +116,7 @@ console.log("test");
 }
 
   // display final password
-  password = initialPassword;
+  passwordText = initialPassword;
 
   alert ("yourpassword is" + password);
-      }  
+}
