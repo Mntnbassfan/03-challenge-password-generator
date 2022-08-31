@@ -73,7 +73,7 @@ function generatePassword() {
     return generatePassword();
   }
   //  create password
-
+console.log("test");
   //   set up array of alphbetical characters
   var alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
   //   set up arry of special characters
@@ -84,19 +84,35 @@ function generatePassword() {
 
   for (var i = 0; i < options.length; i++) {
   if (options.upperCase) {
-  initialPassword.push(alphArray.toUpperCase()pop[i]);
+    // 
+   initialPassword.push(alphArray.toUpperCase.pop[i]); 
   }
   else if (options.lowerCase){
     initialPassword.push(alphArray.pop[i]);
     }
+    // 
   else if (options.numeric){
-      initialPassword.push(alphArray.pop[i]);
+    initialPassword.push(Math.random() * (9 - 1) + 1;);
       }
   else if (options.specialCharacters){
-        initialPassword.push(alphArray.pop[i]);
+        initialPassword.push(charArray.pop[i]);
         }
+
   console.log(initialPassword);
  
-  // randomize initial password store it to final password
-  // display final password
+  // shuffle initial password store it to final password
+  function shuffleArray(initialPassword) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    initialPassword = temp;
 }
+
+  // display final password
+  password = initialPassword;
+
+  alert ("yourpassword is" + password);
+      }  
