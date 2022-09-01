@@ -124,7 +124,6 @@ function generatePassword() {
       c = lowerCase[j];
       console.log(j + c + " was selected from " + many);
       initialPassword = initialPassword + c;
-      console.log(initialPassword);
     }
     //
     else if (options.numeric) {
