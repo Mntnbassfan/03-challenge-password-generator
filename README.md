@@ -26,8 +26,14 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
+## Project URL
+
+https://github.com/Mntnbassfan/03-challenge-password-generator
+
+## Deployed Website URL
+
+https://mntnbassfan.github.io/03-challenge-password-generator/
+
 ## Screenshot of deployed app
 
-...
-Screenshot 2022-09-01 passwrd generator.png
-...
+<img src="Screenshot 2022-09-01 passwrd generator.png" alt="screenshot of deployed application">
